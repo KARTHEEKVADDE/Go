@@ -39,10 +39,10 @@ func main() {
     }
     defer f.Close() // let file be opened till the end
     // Append something
-    if _, err = f.WriteString("new data that wasn't there earlier\n"); err != nil {
+    if p, err := f.WriteString("new data that wasn't there earlier\n"); err != nil {
         panic(err)
     }else{
-      fmt.Println("--Done!")
+      fmt.Println("--Insert Count:", p,"characters--Done!")
     }
 
     data, err = ioutil.ReadFile("myfile.data")
@@ -53,6 +53,5 @@ func main() {
     }
     // Check the content again
     fmt.Print(string(data))
-      fmt.Println("***File successfully changed!")
-
+    fmt.Println("***File successfully changed!")
 }
