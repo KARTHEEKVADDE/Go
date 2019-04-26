@@ -6,7 +6,20 @@ import (
   "os"
   "strings"
 )
-
+func scanner() {
+  fmt.Println("Friend! You have come inside scanner function!")
+  fmt.Print("Want to go out? y/n :")
+  
+  scanner := bufio.NewScanner(os.Stdin)
+  for scanner.Scan() {
+    if scanner.Text() == "y"{
+      fmt.Print("Bye Friend!")
+      return
+    }
+    fmt.Println("You said : ", scanner.Text())
+    fmt.Print("Want to go out? y/n :")
+  }
+}
 func main() {
   fmt.Println("Tell Something Friend!")
   fmt.Println("---------------------")
@@ -26,4 +39,6 @@ func main() {
     }
     fmt.Println("You said this : ", text, "\nAlright! Say me hi!")    
   }
+  
+  scanner()
 }
