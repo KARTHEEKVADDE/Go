@@ -13,7 +13,10 @@ func main() {
   reader := bufio.NewReader(os.Stdin)
   for {
     fmt.Print("-> ")
-    text, _ := reader.ReadString('\n')
+    text, err := reader.ReadString('\n')
+    if err != nil {
+      fmt.Println("Oh sorry! Something went wrong! Try again!")
+    }
     text = strings.Replace(text, "\n", "", -1)
 
     if strings.Compare("hi", text) == 0 {
