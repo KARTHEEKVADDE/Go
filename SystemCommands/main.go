@@ -12,7 +12,6 @@ func execute() {
     // we can store the output of this in our out variable
     // and catch any errors in err
     out, err := exec.Command("ls", "-ltr").Output()
-
     // if there is an error with our execution
     // handle it here
     if err != nil {
@@ -25,7 +24,7 @@ func execute() {
     output := string(out[:])
     fmt.Println(output)
 
-    // let's try the pwd command herer
+    // let's try the pwd command here
     out, err = exec.Command("pwd").Output()
     if err != nil {
         fmt.Printf("%s", err)
@@ -39,6 +38,7 @@ func main() {
     if runtime.GOOS == "windows" {
         fmt.Println("Can't Execute this on a windows machine")
     } else {
+        fmt.Println("Operating System:",runtime.GOOS)
         execute()
     }
 }
