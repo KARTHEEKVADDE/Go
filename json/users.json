@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "name": "Kartheek",
+      "type": "Author",
+      "age": 23,
+      "social": {
+        "facebook": "https://facebook.com/kartheekvadde3",
+        "twitter": "https://twitter.com/kartik180595"
+      }
+    },
+    {
+      "name": "Vinay",
+      "type": "Reader",
+      "age": 17,
+      "social": {
+        "facebook": "https://facebook.com/vinayvadde123",
+        "twitter": "https://twitter.com/vaddevinay244"
+      }
+    }
+  ]
+}
