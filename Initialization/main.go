@@ -32,6 +32,6 @@ func init() {
 func main() {
     fmt.Printf("Init Counter: %d\n", initCounter)
     if hi == 0 {
-        fmt.Println("It's all a lie.")
+        fmt.Println("It's not zero.")
     }
 }
