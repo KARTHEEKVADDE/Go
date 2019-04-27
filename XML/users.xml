@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user type="admin">
+    <name>Kartheek</name>
+    <social>
+      <facebook>https://facebook.com/kartheekvadde3</facebook>
+      <twitter>https://twitter.com/kartik180595</twitter>
+      <youtube>https://youtube.com/channel/UCot3kq3NvrsxEhv78AVkeeA</youtube>
+    </social>
+  </user>
+  <user type="reader">
+    <name>Vinay</name>
+    <social>
+      <facebook>https://facebook.com/vinayvadde123</facebook>
+      <twitter>https://twitter.com/vaddevinay244</twitter>
+      <youtube>https://youtube.com/channel/UCot3kq3NvrsxEhv78AVkeeA</youtube>
+    </social>
+  </user>
+</users>
