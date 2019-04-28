@@ -36,4 +36,3 @@ func main() {
 	} 
 	fmt.Printf("You scored %d out of %d.\n", correct, len(lines))
 }
-
