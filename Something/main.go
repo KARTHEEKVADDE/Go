@@ -71,10 +71,10 @@ func logIn(){
     }
 }
 func createProfile(acNo, mobNo int, name, pwd string){
-  amt := 0
+  amt := data[acNo].amt
   data[acNo] = &user{name, mobNo, pwd, amt}
   fmt.Print(data)
-  fmt.Println("Profile Created Successfully!")
+  fmt.Println("Profile Created/Modified Successfully!")
   fmt.Println("Redirecting to Welcome Page!")
 
   welcome()
@@ -88,15 +88,20 @@ func userProfile(acNo int){
   fmt.Println("Balance:", data[acNo].amt)
 
   fmt.Println("Choose your Option!")
-  fmt.Println("1.Update Your Details 2.Deposit Money 3.Withdraw Money 4.Transfer Money")
+  fmt.Println("1.Update Your Details 2.Deposit Money 3.Withdraw Money 4.Transfer Money 5.Log Out")
   var a int
   fmt.Scanf("%d", &a)
   if a==1{
     signUp()
   }else if a==2{
     deposit(acNo)
+  }else if a==3{
+    withdraw(acNo)
+  }else if a==4{
+    transfer(acNo)
+  }else{
+    welcome()
   }
-
 }
 func exit(){
   os.Exit(1)
@@ -105,7 +110,27 @@ func deposit(acNo int){
   fmt.Print("How much? ")
   var howMuch int
   fmt.Scanf("%d", &howMuch)
-  data[acNo].amt = howMuch
+  data[acNo].amt += howMuch
+  fmt.Println(data, data[acNo])
+  userProfile(acNo)
+}
+func withdraw(acNo int){
+  fmt.Print("How much? ")
+  var howMuch int
+  fmt.Scanf("%d", &howMuch)
+  data[acNo].amt -= howMuch
+  fmt.Println(data, data[acNo])
+  userProfile(acNo)
+}
+func transfer(acNo int){
+  fmt.Print("To Whose Account? ")
+  var toWhom int
+  fmt.Scanf("%d", &toWhom)
+  fmt.Print("How much? ")
+  var howMuch int
+  fmt.Scanf("%d", &howMuch)
+  data[acNo].amt -= howMuch
+  data[toWhom].amt += howMuch
   fmt.Println(data, data[acNo])
   userProfile(acNo)
 }
