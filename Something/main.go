@@ -8,19 +8,15 @@ type user struct{
   amt int
 }
 var data = make(map[int]*user)
-
 func main(){
-  welcome()
-  
+  welcome()  
 }
 func welcome(){
   fmt.Println("Welcome To Mini Bank")
   fmt.Println("Human! Choose your Option!")
-
   fmt.Println("1.Sign Up(New Customer)")
   fmt.Println("2.Log In(Existing Customer)")
   fmt.Println("3.Exit")
-
   var a int
   fmt.Scanf("%d",&a)
   fmt.Print(a)
@@ -52,7 +48,6 @@ func signUp(){
       goto password
     }
   fmt.Println("3.Exit")
-
 }
 func logIn(){
   var acNo int; var pwd string
@@ -76,7 +71,6 @@ func createProfile(acNo, mobNo int, name, pwd string){
   fmt.Print(data)
   fmt.Println("Profile Created/Modified Successfully!")
   fmt.Println("Redirecting to Welcome Page!")
-
   welcome()
 }
 func userProfile(acNo int){
@@ -86,7 +80,6 @@ func userProfile(acNo int){
   fmt.Println("Mobile Number:", data[acNo].mobNo)
   fmt.Println("Password:", data[acNo].pwd)
   fmt.Println("Balance:", data[acNo].amt)
-
   fmt.Println("Choose your Option!")
   fmt.Println("1.Update Your Details 2.Deposit Money 3.Withdraw Money 4.Transfer Money 5.Log Out")
   var a int
