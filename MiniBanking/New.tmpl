@@ -1,0 +1,21 @@
+{{ define "New" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>New Details</h2>  
+    <form method="POST" action="insert">
+      <label> Name </label><input type="text" name="name" /><br />
+      <label> Years Of Experience </label><input type="int" name="yearsOfExperience" /><br />
+      <label> Email ID </label><input type="email" name="emailID" /><br />
+      <label> Project Name </label><input type="text" name="projectName" /><br />
+      <label> Designation </label><input type="text" name="designation" /><br />
+      <label> Skillset </label><input type="text" name="skillset" /><br />
+      <label> Completed Trainings </label><input type="text" name="trainings" /><br />
+      <label> Project Aquired Skills </label><input type="text" name="projectAquiredSkills" /><br />
+      <label> Achievements </label><input type="text" name="achievements" /><br />
+      <label> Employee Status </label><input type="text" name="employeeStatus" /><br />
+
+      <label> Password </label><input type="password" name="password" /><br />
+      <input type="submit" value="Save user" />
+    </form>
+  {{ template "Footer" }}
+{{ end }}

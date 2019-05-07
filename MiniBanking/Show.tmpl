@@ -1,0 +1,18 @@
+{{ define "Show" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <h2> Register {{ .Id }} </h2>
+      <p>Name: {{ .Name }}</p>
+      <p>Years Of Experience:  {{ .Years Of Experience }}</p>
+      <p>Email ID: {{ .Email ID }}</p>
+      <p>Project Name: {{ .Project Name }}</p>
+      <p>Designation: {{ .Designation }}</p>
+      <p>Skillset: {{ .Skillset }}</p>
+      <p>Completed Trainings: {{ .Completed Trainings }}</p>
+      <p>Project Aquired Skills: {{ .Project Aquired Skills }}</p>
+      <p>Achievements:  {{ .Achievements }}</p><br /> 
+      <p>Employee Status:  {{ .Employee Status }}</p><br /> 
+
+      <a href="/edit?id={{ .Id }}">Edit</a></p>
+  {{ template "Footer" }}
+{{ end }}
