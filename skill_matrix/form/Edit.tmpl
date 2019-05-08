@@ -1,0 +1,21 @@
+{{ define "Edit" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>Edit Name and City</h2>  
+    <form method="POST" action="update">
+      <input type="hidden" name="uid" value="{{ .Id }}" />
+      <label> Name </label><input type="text" name="name" value="{{ .Name }}"  /><br />
+      <label> Email </label><input type="email" name="email" value="{{ .Email }}"  /><br />
+      <label> Years Of Experience </label><input type="int" name="yearsOfExperience" value="{{ .YearsOfExperience }}"  /><br />
+      <label> Project Name </label><input type="text" name="projectName" value="{{ .ProjectName }}"  /><br />
+      <label> Designation </label><input type="text" name="designation" value="{{ .Designation }}"  /><br />
+      <label> Skillset </label><input type="text" name="skillset" value="{{ .Skillset }}"  /><br />
+      <label> Completed Trainings </label><input type="text" name="completedTrainings" value="{{ .CompletedTrainings }}"  /><br />
+      <label> Project Aquired Skills </label><input type="text" name="projectAquiredSkills" value="{{ .ProjectAquiredSkills }}"  /><br />
+      <label> Achievements </label><input type="text" name="achievements" value="{{ .Achievements }}"  /><br />
+      <label> Employee Status </label><input type="text" name="employeeStatus" value="{{ .EmployeeStatus }}"  /><br />
+      
+      <input type="submit" value="Save user" />
+    </form><br />    
+  {{ template "Footer" }}
+{{ end }}
