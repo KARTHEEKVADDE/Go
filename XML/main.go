@@ -60,8 +60,8 @@ func main() {
     // print out the user Type, their name, and their facebook url
     // as just an example
     n := users.Users
-    fmt.Println(users)
-    fmt.Println(n)
+    fmt.Println(users, "\n------")
+    fmt.Println(n, "\n------")
 
     for i := 0; i < len(n); i++ {
         fmt.Println("User Type: " + n[i].Type)
