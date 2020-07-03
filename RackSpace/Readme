@@ -1,6 +1,6 @@
 Prerequisite: Docker is installed
 
-1. Goto Project Directory and Build Dockerfile 
+1. Download RackSpace Folder, Goto RackSpace Project Directory and Build Dockerfile 
     docker build -t my-app .
 
 2. Run Docker Image created in the previous step
